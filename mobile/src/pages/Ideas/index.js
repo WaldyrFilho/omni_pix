@@ -1,5 +1,6 @@
 import React from 'react';
-import { Feather } from '@expo/vector-icons'
+import { Feather } from '@expo/vector-icons';
+import { useNavigation } from '@expo/vector-icons';
 import { View, FlatList, Image, Text, TouchableOpacity } from 'react-native';
 
 import logoImg from '../../assets/logo.png';
@@ -22,6 +23,8 @@ export default function Ideas(){
             <FlatList 
                 data={[1, 2, 3]}
                 style={styles.ideaList}
+                keyExtractor={idea => String(idea)}
+                showsVerticalScrollIndicator={false}
                 renderItem={() => (
                     <View style={styles.idea}>
                     <Text style={styles.ideaProperty}>USER:</Text>

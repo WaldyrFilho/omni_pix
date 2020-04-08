@@ -1,7 +1,7 @@
 const connection = require('../database/connection');
 const crypto = require('crypto');
 
-module.exports = {
+module.exports UserController = {
     async index(request, response) {
         const users = await connection('users').select('*');
     
